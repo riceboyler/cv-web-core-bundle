@@ -1,0 +1,32 @@
+{
+  "name": "cv-web-core-bundle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "neutrino build",
+    "start": "neutrino start",
+    "lint": "neutrino lint",
+    "test": "neutrino test"
+  },
+  "devDependencies": {
+    "@neutrinojs/airbnb": "^8.3.0",
+    "@neutrinojs/jest": "^8.3.0",
+    "@neutrinojs/react-components": "^8.3.0",
+    "@types/react": "^16.8.15",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.14",
+    "neutrino": "^8.3.0",
+    "prop-types": "^15.7.2",
+    "styled-components": "^4.2.0",
+    "tslint-react": "^4.0.0"
+  },
+  "dependencies": {
+    "neutrino-middleware-ts-loader": "^2.3.1",
+    "neutrino-middleware-ts-react-loader": "^2.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}
