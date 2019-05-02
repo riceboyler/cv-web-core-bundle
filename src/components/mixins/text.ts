@@ -4,7 +4,7 @@ import media from "./media"
 const size = fontSizes => {
     return css`
         font-size: ${fontSizes.md};
-        ${media.sm`
+        ${media["sm"]`
             font-size: ${fontSizes.xs};
         `};
     `

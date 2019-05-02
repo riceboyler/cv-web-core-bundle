@@ -1,6 +1,6 @@
 import * as React from "react"
 import { ThemeProvider } from "styled-components"
-import{ palette, layout } from '../utility/variables'
+import { palette, layout } from "../utility/variables"
 
 export enum buttonTypes {
     DEFAULT = "default",
@@ -10,23 +10,27 @@ export enum buttonTypes {
 }
 
 export interface ICVTheme {
-    defaultBackground: string,
+    defaultBackground: string
     text: {
-        default: string,
-        link: string,
-        reverse: string,
-        brandColor: string,
-        error: string,
-    },
-    progress: object,
-    input: object,
-    form: object,
-    button: object,
-    fontWeights: object,
-    bodyFontSizes: object,
-    headingFontSizes: object,
-    fontFamily: object,
-    lineHeight: string,
+        default: string
+        link: string
+        reverse: string
+        brandColor: string
+        error: string
+    }
+    progress: object
+    input: object
+    form: object
+    button: object
+    fontWeights: {
+        book: string
+        normal: string
+        bold: string
+    }
+    bodyFontSizes: object
+    headingFontSizes: object
+    fontFamily: object
+    lineHeight: string
 }
 
 export const cvTheme: ICVTheme = {
@@ -169,18 +173,18 @@ export const cvTheme2: ICVTheme = {
 }
 
 interface ICVThemeProviderProps {
-    theme: object,
+    theme: object
     children: JSX.Element
 }
 
 // V1
-export default class CVThemeProvider extends React.PureComponent <ICVThemeProviderProps> {
-    render() {
-        const { theme, children } = this.props
-        const mergedCVTheme = { ...cvTheme, ...theme }
-        return <ThemeProvider theme={mergedCVTheme}>{children}</ThemeProvider>
-    }
+const CVThemeProvider = (props: ICVThemeProviderProps) => {
+    const { theme, children } = props
+    const mergedCVTheme = { ...cvTheme, ...theme }
+    return <ThemeProvider theme={mergedCVTheme}>{children}</ThemeProvider>
 }
+
+export default CVThemeProvider
 
 // V2
 export const CVThemeProvider2 = ({ children }) => (

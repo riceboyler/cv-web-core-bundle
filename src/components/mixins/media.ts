@@ -14,9 +14,9 @@ const breakpoints = {
 }
 
 const media = Object.keys(breakpoints).reduce((acc, label) => {
-    acc[label] = (...args) => css`
+    acc[label] = (...args: Array<any>) => css`
         @media (max-width: ${breakpoints[label]}px) {
-            ${css(...args)};
+            ${css(args[0], ...args)};
         }
     `
     return acc
@@ -25,7 +25,7 @@ const media = Object.keys(breakpoints).reduce((acc, label) => {
 export const MobileOnly = el => {
     return styled(el)`
         display: none;
-        ${media.md`
+        ${media["md"]`
             display:block;
         `};
     `
@@ -33,7 +33,7 @@ export const MobileOnly = el => {
 
 export const HiddenMobile = el => {
     return styled(el)`
-        ${media.md`
+        ${media["md"]`
             display:none;
         `};
     `

@@ -1,4 +1,4 @@
-const load = src =>
+const load = (src: string) =>
     new Promise((resolve, reject) => {
         const script = document.createElement("script")
         script.src = src
