@@ -1,5 +1,5 @@
 import { css } from "styled-components"
-import { cvTheme, ICVTheme } from "../../themes/CVThemeProvider"
+import { cvTheme, ICVTheme } from "../../../themes/CVThemeProvider"
 
 export enum TextWeightsEnum {
     BASE = "base",

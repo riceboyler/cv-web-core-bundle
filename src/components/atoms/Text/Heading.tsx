@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
-import size from "../../mixins/text"
-import { cvTheme, ICVTheme } from "../../themes/CVThemeProvider"
+import size from "../../../mixins/text"
+import { cvTheme, ICVTheme } from "../../../themes/CVThemeProvider"
 import { textBase, textDefaultProps } from "./text"
 
 const headingBase = css`
